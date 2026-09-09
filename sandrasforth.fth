@@ -50,7 +50,7 @@
   repeat
   r> drop dup 1+ >in ! over - >r [ 'input 1+ ] literal + r> ;
 
-: word ( char - addr ) >r >in @
+: word ( char -- addr ) >r >in @
   begin
     dup 'input c@ u< over [ 'input 1+ ] literal + c@ r> dup >r = and
   if

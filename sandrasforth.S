@@ -463,7 +463,7 @@ DEFWORD equals, "=" # x1 x2 -- flag
 
 	.quad exit
 
-DEFWORD zless, "0<" # n - flag
+DEFWORD zless, "0<" # n -- flag
 	.quad lit, 1 << (CELL * 8 - 1)
 	.quad and
 	.quad flag
@@ -718,7 +718,7 @@ DEFWORD type, "type" # addr u --
 
 	.quad exit
 
-DEFWORD parse, "parse" # char - addr u
+DEFWORD parse, "parse" # char -- addr u
 	.quad rpush
 	.quad toin
 	.quad fetch
